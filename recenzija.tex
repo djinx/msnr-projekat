@@ -1,0 +1,514 @@
+
+
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+\newcommand{\say}[1]{\textit{#1}}
+
+\begin{document}
+
+\title{Примена машинског учења у статичкој верификацији софтвера\\ \small{Лазар Ранковић, Немања Мићовић, Урош Стегић}}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Uputstva}
+\emph{Prilikom predavanja odgovora na recenziju, obrišite ovo poglavlje.}
+
+Neophodno je odgovoriti na sve zamerke koje su navedene u okviru recenzija. Svaki odgovor pišete u okviru okruženja \verb"\odgovor", \odgovor{kako bi vaši odgovori bili lakše uočljivi.} 
+\begin{enumerate}
+
+\item Odgovor treba da sadrži na koji način ste izmenili rad da bi adresirali problem koji je recenzent naveo. Na primer, to može biti neka dodata rečenica ili dodat pasus. Ukoliko je u pitanju kraći tekst onda ga možete navesti direktno u ovom dokumentu, ukoliko je u pitanju duži tekst, onda navedete samo na kojoj strani i gde tačno se taj novi tekst nalazi. Ukoliko je izmenjeno ime nekog poglavlja, navedite na koji način je izmenjeno, i slično, u zavisnosti od izmena koje ste napravili. 
+
+\item Ukoliko ništa niste izmenili povodom neke zamerke, detaljno obrazložite zašto zahtev recenzenta nije uvažen.
+
+\item Ukoliko ste napravili i neke izmene koje recenzenti nisu tražili, njih navedite u poslednjem poglavlju tj u poglavlju Dodatne izmene.
+\end{enumerate}
+
+Za svakog recenzenta dodajte ocenu od 1 do 5 koja označava koliko vam je recenzija bila korisna, odnosno koliko vam je pomogla da unapredite rad. Ocena 1 označava da vam recenzija nije bila korisna, ocena 5 označava da vam je recenzija bila veoma korisna. 
+
+NAPOMENA: Recenzije ce biti ocenjene nezavisno od vaših ocena. Na osnovu recenzije ja znam da li je ona korisna ili ne, pa na taj način vama idu negativni poeni ukoliko kažete da je korisno nešto što nije korisno. Vašim kolegama šteti da kažete da im je recenzija korisna jer će misliti da su je dobro uradili, iako to zapravo nisu. Isto važi i na drugu stranu, tj nemojte reći da nije korisno ono što jeste korisno. Prema tome, trudite se da budete objektivni. 
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Spomenuto je da softverske greške mogu imati značajne posledice pogotovo u nekim oblastima. Predlog za uklanjanje ovih grešaka je korišćenjem statičke verifikacije uz pomoć tehnika mašinskog učenja. Date su definicije i objašnjenja bitnih pojmova iz te dve oblasti sa dovoljno detalja da se može razumeti tema. Zatim su opisane upotrebe navedenih tehinka na nekim konkretim primerima.
+
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+\textit{Poglavlje 3.} Prilikom navođenja tehnika za poslednju je dat engleski naziv dok za ostale nije. \\
+\indent Preporuka: Napisati engleske nazive za sve. Prvi razlog je usklđivanje stila. Drugi je zbog preovladajuće literature koja je na engleskom jeziku kako bi čitaocu bilo lakše da pronađe dodatne informacije, a možda više zbog nedostajuće i slabo zastupljene literature na srpskom jeziku kako ne bi došlo do mešanja ili zabune pojmova. Isto može biti učinjeno i u poglavlju 4.2 za tehnike mašinskog učenja. \\
+
+%TODO da li dodati i u poglavlju 4.2?
+\odgovor{Додати су енглески називи.} \\
+
+\textit{Poglavlje 4 (prvi pasus, druga rečenica).} Piše: ,,Pokazana je važnost te oblasti...''. Na samom početku uvoda jeste rečeno da ,,greške prouzrokovane softverom mogu imati ozbiljne posledice''. \\ 
+\indent Preporuka: Navesti primer neke od tih ,,ozbiljnih posledica'' (npr. pad aviona, smrt pacijenta, ...) ili barem referisati na rad koji to tvrdi i tamo daje neki razlog zašto je to bitno. Ukoliko je primer izbačen ili nije stavljen zbog nedostatka prostora (zbog ograničenja strana) onda ovu primedbu možete ignorisati. \\
+\indent Pojašljenje: Ovo treba dodati u samom uvodu a ne u poglavlju 4. \\
+
+\textit{Poglavlje 4.2 (prvi pasus).} Piše: ,,O opštoj slici primene algoritama mašinskog učenja je bilo više reči u uvodnom delu ovog poglavlja.''. Uvodni deo je prvi pasus poglavlja 4 gde se ne govori o tome. U pitanju je poglavlje 4.1. \\
+\indent Preporuka: Referisati na ovo poglavlje, na primer dodati u zagradi (poglavlje 4.1) ili promeniti tekst u ,,...bilo više reči u poglavlju 4.1''. \\
+
+\textit{Poglavlje 4.2 (pasus ,,Metoda potpornih vektora'').} Piše: ,,Binarni klasifikator je hiperravan koja deli prostor na dva dela, tako da su u jednom delu prostora nađu sve istance koje pripadaju jednoj klasi, a u drugom delu će se naći one koje pripadaju drugoj klasi.''. \\
+\indent Primedba: Ne postoji garancija da takva hiperravan postoji, tj. da je moguće podeliti istance tako da se u dobijenim delovima nađu samo istance jedne klase. Ako se radi pod pretpostavkom da je moguće onda to treba navesti tj. da su podaci linearno razdvojivi (linearly separable) ili ako nije onda spomenuti da se vrši klasifikacija sa mekom marginom. \\
+\indent Komentar: Pretpostavljam da niste želeli da previše ulazite u detalje ali predlažem da se doda ovo pojašnjenje. \\
+
+\textit{Poglavlje 6.} Nema uvod. \\
+\indent Preporuka: Dodati uvod. \\
+\indent Komentar: Ovu primedbu kao i naredne tri uzeti u obzir zajedno. \\
+
+\textit{Poglavlje 6 (pasus ,,Pronalaženje interpolanti'').} Piše: ,,Neformalno govoreći, interpolanta predstavlja predikat koji razdvaja pozitivna stanja programa od negativnih.''. \\
+\indent Primedba: Ovo je već rečeno u poglavlju 5 i to skoro potpuno istim rečima. \\
+\indent Preporuka: Ako je definicija ponovljena predlažem da se to naglasi i referiše na taj deo teksta (poglavlje). Ovime bi se čitaocu naglasilo da je to možda deo nekog šireg konteksta i da može dobiti više informacija o tom pojmu u nekom drugom (prethodnom) delu teksta. \\
+\indent Komentar: Pretpostavljam da su različite osobe pisale poglavlja 5. i 6. i da je zbog toga došlo do nesaglasnosti. \\
+
+\textit{Poglavlje 6 (pasus ,,Pronalaženje interpolanti'').} Piše: ,,U delu 6 izložene su osnove iz...'' \\
+\indent Primedba: Referiše se nad deo teksta u kome se čitalac trenutno nalazi. \\
+\indent Preporuka: Može se reći ,,u ovom poglavlju'' ili ,,u ovom delu''. \\
+
+\textit{Poglavlje 6.} Posmatrajući celo poglavlje... \\
+\indent Primedba: Podela ove oblasti je zbunjujuća. Prvi pasus ,,Pronalaženje interpolanti'' ima neku ulogu uvoda ali u kombinaciji sa narednim pasusom izgleda kao neko nabrajanje tehnika spomenutih u naslovu (počeci oba pasusa počinu podebljanim tekstom). Ovo nema smisla zato što su naslovi pasusa slični odnosno naslovi su ,,Pronalaženje interpolanti'' i  ,,Pronalaženje interpolanti koristeći metod potpornih vektora'' i više izgleda kao da je drugi pasus podoblast prvog. \\
+\indent Preporuka: Predlažem sledeće, a pretpostavljam da je ovo i bila namera i da je došlo do greške u Latex-u prilikom navođenja podsekcije. Prvo da pasus ,,Pronalaženje interpolanti'' bude uvod (ukloniti podebljan početni tekst). Drugo da pasus ,,Pronalaženje interpolanti koristeći metod potpornih vektora'' bude poglavlje 6.1 (trenutno poglavlje 6.1 će onda biti 6.2.). Ovo odgovara onome što je rečeno na početku poglavlja 6 u pasusu ,,Pronalaženje interpolanti'' tako što će novi 6.1 i 6.2 biti primeri o kojima se govori. \\
+tl;dr u latex kodu promeniti:
+\begin{verbatim}
+\paragraph{Проналажење интерполанти користећи метод потпорних вектора}
+\end{verbatim}
+u
+\begin{verbatim}
+\subsection{Проналажење интерполанти користећи метод потпорних вектора}
+\end{verbatim}
+
+\textit{Poglavlje 5 i 6.} Nadovezujući se na prethodu primedbu. \\
+\indent Primedba: Koliko sam razumeo poglavlje 5 je zapravo neka vrsta uvoda za poglavlje 6. \\
+\indent Preporuka: Ili prilagoditi poglavlje 6 da bude deo poglavlja 5 ili prepraviti uvod poglavlja 6 tako da bude usklađen sa prethodnim poglavljem. \\
+\indent Komentar: U suštini taj prelaz između 5 i 6 bi mogao biti bolji. Ukoliko se razreši prethodna primedba onda možda ovo neće biti problem. \\
+
+\textit{Poglavlje 6}. Data je formula: \\ 
+$A \equiv x_1 = 0 \land y_1 = 0 \land if\_then\_else(b,\ x = x_1 \land y = y_1,\ x = x_1 + 1 \land y = y_1 + 1)$ \\
+\indent Primedba: Ne bi bilo loše naglasiti šta je tačno $b$ tj. da se ono odnosi na uslov u \begin{verbatim} 3: while(*) \end{verbatim} koji je nepoznat ili netrivijalan i da nema nikakve veze sa $B$. \\
+
+\textit{Poglavlje 6 (Tabela 1).} U pasusu u kojem se referiše na tabelu 1 se kaže: ,,Interpolante koje su označene sa isto su interpolante koje su dobijene koristeći rešavač OpenSMT.'' \\
+\indent Primedba: Reč ,,isto'' uvodi zabunu. Nije jasno po kom poređenju je isto. \\
+\indent Preporuka: Radi pojašnjenja dodao bih: ,,...u poređenju sa tehnikom korišćenom u [13].'' ili ,,...u navedenom radu.'' gde je [13] reference rada iz kog je uzeta tabela. \\
+
+\textit{Poglavlje 6.1 (pasus ,,Građenje klasifikatora netačne invarijante'').} Uzimajući u obzir tekst od ovog pasusa pa do kraja poglavlja 6... \\
+\indent Primedba: Ovaj pasus nije povezan sa poglavljem u kojem se nalazi (6.1). \\
+\indent Preporuka: Izdvojiti spomenuti deo teksta u novo podpoglavlje koje će biti odvojeno od 6.1. \\
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+\begin{enumerate}
+	\item \textit{Poglavlje 3 (prvi pasus).} Počinje sa navodnicima koji se ne završavaju. Navodnici nemaju smisla u ovoj rečenici i treba ih ukloniti.
+    \\\\
+    \odgovor{Уклоњено.} 
+	\\
+    \item \textit{Poglavlje 3 (pasus ,,Proveravanje ograničenih modela'').} U rečenici: ,,Rezultat \textbf{sat} rešavača...'', treba da piše ,,SAT'' velikim slovima. U istoj rečenici piše ,,sto'' umesto ,,što''.
+    \\\\
+    \odgovor{Додато \emph{САТ} као и превод да енглески, реч сто исправљена у што.} 
+	\\
+	\item \textit{Poglavlje 4 (prvi pasus).} U rečenici: ,,U prethodnim poglavljima je opisana statička verifikacij\textbf{u}'', postoji slovna greška (,,verifikacij\textbf{U}'' u ,,verifikacij\textbf{A}''). Može se i dodati referenca na to poglavlje (3).
+    \\\\
+    \odgovor{Исправљено, референца није додата јер је непотребна.} 
+	\\
+	\item \textit{Poglavlje 4.1 (drugi pasus posle definicije).} U zadnjoj rečenici stoji tačka pa referenca pa ponovo tačka. Ukloniti prvu tačku.
+    \\\\
+    \odgovor{Уклоњено.} 
+	\\
+	\item \textit{Poglavlje 4.1 (treći pasus posle definicije).} U rečenici: ,,Primer regresije je predikcij\textbf{u}...'', postoji slovna greška (,,predikcij\textbf{U}'' u ,,predikcij\textbf{A}'' ili ,,predviđanje'').
+    \\\\
+    \odgovor{Измењено у предикцију.} 
+	\\
+	\item \textit{Poglavlje 4.1 (četvrti pasus posle definicije).} U rečenici: ,,Izabra\textbf{li} model...'', postoji slovna greška (,,Izabra\textbf{LI}'' u ,,Izabra\textbf{N}'').
+    \\\\
+    \odgovor{Уклоњено.} 
+	\\
+	\item \textit{Poglavlje 4.2 (prvi pasus).} U rečenici: ,,Kako je problem klasifikacije centralni problem nad kojim\textbf{E}...'', postoji slovna greška (,,kojim\textbf{E}'' u ,,kojim'').
+    \\\\
+    \odgovor{Уклоњено \emph{е}.} 
+	\\
+	\item \textit{Poglavlje 5 (drugi pasus).} U rečenici: ,,Problem koji se ovde javlja je generisanje interpolanti, tj pronalaženje...'', postoji greška. Skraćenica ,,tj.'' nema tačku.
+    \\\\
+    \odgovor{Додата тачка.} 
+	\\    
+	\item \textit{Poglavlje 5 (treći pasus).} U rečenici: ,,Pored iterpolanti...'', postoji slovna greška. Fali slovo ,,N'' (,,iterpolanti'' u ,,i\textbf{N}terpolanti'').
+    \\\\
+    \odgovor{Додато слово \emph{н}.} 
+	\\
+\end{enumerate}
+
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad daje odgovore na postavljena zadatka. Osnovni problemi statičke verifikacije softvera su izloženi i objašljeni. Takođe su opisane i  osnovne tehnike mašinskog učenja koje se mogu koristiti. Uz sve to su dati i prikladni primeri.
+\item Da li je nešto važno propušteno?\\
+Ne. Osnovni pojmovi neophodni za razumevalje teme su dati i pojašljeni.
+\item Da li ima suštinskih grešaka i propusta?\\
+Ne. Kada je u pitanju sadržina rada ne postoje nikakvi propusti. Jednini propust je u malo slabijoj organizaciji teksta u poglavlju 6 koji se može lako ispraviti uz navedene preporuke u odeljku za ,,Krupne primedbe i sugestije''.
+\item Da li je naslov rada dobro izabran?\\
+Da. Naslov rada je adekvatan i jasan.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da. Sažetak jasno objašnjava sadržinu rada.
+\item Da li je rad lak-težak za čitanje?\\
+Ne. Svi pojmovi su jasno objašljeni. Ovo se posebno odnosi na delove o statičkoj verifikaciji i mašinskom učenju. Čitalac koji nije upoznat sa ovim oblastima dobija dovoljno detaljne informacije koje su mu neophodne radi razumevanja rada. Primeri su adekvatni i jasno opisuju predstavljene tehnike, tj. nisu komplikovani i dovoljno su detaljni da predstave suštinu tehnike.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Možda. Predznanje iz oblasti mašinskog učenja i automatskog rezonovanja može znatno da olakša razumevanje rada. Međutim kao što je već spomenuto dati su neophodne definicije i pojmovi potrebni za shvatanje čak i krajnjih primera.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Da. Literatura koja je koriščena je ispravno navedena.
+\item Da li su u radu reference korektno navedene?\\
+Da. Reference su isprave i pravilno navedene.
+\item Da li je struktura rada adekvatna?\\
+Da. Stuktura rada je sasvim zadovoljavajuća. Tok oblasti je prikladan i čitaoca dobrim redom uvodi u temu.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da. Svi uslovi su ispunjeni.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Da. Sve slike i tabele su adekvatne. Predlažem samo da se slika 5 malo uveliča.	
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+\\
+Sa većinom spomenutih pojmova i tehnika sam već upoznat. Zahvaljujući kursevima Istraživanje podataka i Automatsko rezonovanje između ostalih koje trenutno slušam mogu da kažem da sam upućen u tematiku. Nisam imao problema sa razumevanjem oblasti vezanih za verifikaciju softvera i mašinsko učenje. Što se tiče konkretne primene mašinskog učenja u statičkoj verifikaciji softvera ovo mi je prvi susret sa ovom temom.
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{О чему рад говори?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+У раду се говори о начинима испитивања исправности програма као и потенцијалним проблемима који постоје када је у питању провера исправности. Говори се статичкој верификацији софтвера и проблемима које има, с тим да се помиње и динамичка верификација. Такође се говори о машинском учењу и техникама које машинско учење имплементира, као што су линеарна регресија и стабло одлучивања. 
+
+\section{Крупне примедбе и сугестије}
+Било би боље када би се слика 1: Стабло одлучивања превела са енглеског на српски језик.
+
+У реченици "У делу 6 детаљније је описан приступ коришћен у [13]."\ би било боље када би се мало више описало о чему се заправо ради уместо коришћења хиперлинкова, јер у случају да се рад не чита у електронској форми може бити јако непрактично тражити по раду допуне за ову реченицу. Ово се понавља и у реченици: "У делу 6 изложене су основе из [13]...".
+
+\section{Ситне примедбе}
+У уводу сам наишао на реч провераву, претпостављам да ту треба ићи реч проверу.
+    \\\\
+    \odgovor{Провераву се налазило у секцији Верификација софтвера и сада је исправљена у \emph{проверу}.} 
+	\\\\
+Можда преформулисати неодлучив проблем.
+    \\\\
+    \odgovor{Не.} 
+	\\\\
+Не тривијално треба бити једна реч.
+    \\\\
+    \odgovor{Поправљено.} 
+	\\\\
+Непотребни наводници на почетку поглавља Технике статичке верификације.
+    \\\\
+    \odgovor{Уклоњено.} 
+	\\\\
+Навођење алгебарских система треба бити ван заграда и енглеска реч and пребачена у и.
+    \\\\
+    \odgovor{Исправљено.} 
+	\\\\
+Следећа реченица треба се преформулисати јер је јако неразумна: Резултат сат решавача је може бити формула је задовољива сто би значило да је програм коректан или ако је формула незадовољива резултат ће бити контрапример којим се показује да програм није коректан и може представљати основу за дебагованје. 
+    \\\\
+    \odgovor{Исправљено.} 
+	\\\\
+Последња реченица у уводу четвртог поглавља на крају има , уместо .
+    \\\\
+    \odgovor{Исправљено.} 
+	\\\\
+Реченица: "Машинско учење се може посматрати као област рачунарства која се бави анализом алгоритама који генерализују."\ Шта генерализују?
+%ТОDO dati odgovor
+У реченици: "Пример регресије је предикцију...", реч предикцију заменити са предикција.
+    \\\\
+    \odgovor{Измењено у \emph{предикцију}.} 
+	\\\\
+У реченици: "Изабрали модел...", реч Изабрали заменити са Изабрани.
+    \\\\
+    \odgovor{Измењено.} 
+	\\\\
+Реч "селедећем" заменити са "следећем".
+    \\\\
+    \odgovor{Измењено.} 
+	\\\\
+У реченици: "Неки од проблема који се јављају при употребни...", реч употребни заменити са употреби.
+    \\\\
+    \odgovor{Измењено.} 
+	\\\\
+\section{Провера садржајности и форме семинарског рада}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Да ли рад добро одговара на задату тему?\\
+Да, сматрам да је тема добро обрађена.
+\item Да ли је нешто важно пропуштено?\\
+Сматрам да је све битно обрађено.
+\item Да ли има суштинских грешака и пропуста?\\
+Нема, све је покривено у задовољавајућој мери.
+\item Да ли је наслов рада добро изабран?\\
+Сматрам да је наслов рада адекватно изабран јер буди интересовање и жељу за читањем рада.
+\item Да ли сажетак садржи праве податке о раду?\\
+Сматрам да садржи довољно информација да пробуди интересовање о теми и укратко опише о чему ће се говорити у тексту.
+\item Да ли је рад лак-тежак за читање?\\
+Сматрам да углавном јесте лак за читање.
+\item Да ли је за разумевање текста потребно предзнање и у коликој мери?\\
+Потребна је јако мала количина предзнања, саме основе.
+\item Да ли је у раду наведена одговарајућа литература?\\
+Да.
+\item Да ли су у раду референце коректно наведене?\\
+Да.
+\item Да ли је структура рада адекватна?\\
+Да.
+\item Да ли рад садржи све елементе прописане условом семинарског рада (слике, табеле, број страна...)?\\
+Да.
+\item Да ли су слике и табеле функционалне и адекватне?\\
+Да.
+\end{enumerate}
+
+\section{Оцените себе}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+д) мало упућени
+
+Образложење: Познајем неке основе у вези ове теме али далеко од нивоа на којима овај рад говори.
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+Rad govori o načinima verifikacije softvera, o osnovama mašinskog učenja i primenama mašinskog učenja u verifikaciji softvera, koje je donelo veliko poboljšanje u toj oblasti. Uz svaku od obrađenih tema, rad pruža niz detaljno objašnjenih tehnika koje se primenjuju za konkretnu temu.
+
+\section{Krupne primedbe i sugestije}
+Mnoštvo tehnika zaista pruža veliki broj informacija o temi koja se obrađuje, ali se postavlja pitanje \say {Koju tehniku zaista koristiti?} Kod većine tehnika fale okolnosti pod kojima se, konkretno ona, koristi i kada će dati najbolje rezultate (posledice toga bi bile i odnosi između tehnika).
+\section{Sitne primedbe}
+Stil pisanja je razumljiv i konkretizovan, među sitne primedbe spadaju samo neke od štamparskih grešaka (završetak rečenice zarezom, počinjanje pasusa navodnikom itd.)
+\section{Provera sadržajnosti i forme seminarskog rada}
+
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Rad u potpunosti odgovara na zadatu, veoma zahtevnu, temu i pruža veliki broj informacija o njoj.
+\item Da li je nešto važno propušteno?\\
+U radu ništa previše važno nije propušteno.
+\item Da li ima suštinskih grešaka i propusta?\\
+Rad ne trpi suštinske greške, već ispunjava očekivanja koja su data u uvodnom delu.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada je adekvatan.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak se kosi sa uvodnim delom, odnoso teško ih je razdvojiti. Sažetak bi trebao da sadrži informacije o konkretnom radu, o onome na čemu se zasniva i o čemu će biti govoreno (izuzetak je poslednja rečenica sažetka).
+\item Da li je rad lak-težak za čitanje?\\
+Rad je srednje težak za čitanje zbog količine informacija.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Autori su se potrudili da predznanje za razumevanje teksta bude minimalno i u tome su i uspeli.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Literatura navedena odgovara temi na kojoj se rad zasniva.
+\item Da li su u radu reference korektno navedene?\\
+Reference su korektno navedene osim u sekciji 6, kada postoji referenca upravo na sekciju 6 (smatram da je ona suvišna, mogla je biti zamenjena rečenicom \say{U ovoj sekciji}, ili \say{U ovom delu} itd.).
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je u inkrementalnom obliku, što puno pomaže pri čitanju i razumevanju. Autori su krenuli od osnova i nadograđivali rad do ciljanih tema.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Rad ispunjava propisane uslove.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Slike i tabele daju dodatne informacije o tekstu u kom su adekvatno referisane.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Smatram sebe skoro neupućenim u temu istraživanja rada, ali autori su to nadomestili dobrim objašnjenima potkrepljenim primerima i pomogli mi da razumem tematiku o kojoj rad govori.
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Glavna tema ovog rada se odnosi na probleme statičke verifikacije softvera i primenu mašinskog učenja na statičku verifikaciju softvera. Pokrivene su i manje celine poput same verifikacije softvera i mašinskog učenja, u kojima su predstavljeni osnovni pojmovi ovih oblasti, potrebni za dalje čitanje i razumevanje glavne teme.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+Osoba koja nije upoznata sa oblastima koje obrađuje ova tema ne može da isprati u potpunosti ovaj tekst bez dodatne literature, pa bi trebalo posvetiti više pažnje objašnjavajući neke pojmove. Na primer u glavi 3 koja opisuje tehnike statičke verifikacije, nije najjasnije kakve su te tehnike.
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Postoji par štamparskih, sintaksnih i stilskih grešaka na koje sam naišla, koje ću navesti u nastavku:
+\begin{enumerate}
+\item U sadržaju, Uvod i Literatura su napisani latinicom, a ostalo je ćirilicom.
+    \\\\
+    \odgovor{Исправљено.} 
+	\\
+\item Naslov prve glave je napisan latinicom, ostali naslovi su napisani ćirilicom.
+    \\
+    \odgovor{Уклоњено је ако се мисли на Увод.} 
+	\\
+\item Na par mesta je napisano sto umesto što.
+    \\\\
+    \odgovor{Исправљено.} 
+	\\
+\item Na par mesta su znakovi interpunkcije upotrebljeni pogrešno, zarez umesto tačke itd.
+    \\\\
+    \odgovor{Исправљено.} 
+	\\
+\item Poglavlje 6.1, u drugom pasusu je napisano коњункције umesto конјункције.
+    \\\\
+    \odgovor{Исправљено.} 
+	\\
+\end{enumerate}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da, rad odgovara dobro na zadatu temu.
+\item Da li je nešto važno propušteno?\\
+S obzirom da nisam stručna u oblastima o kojima ovaj rad govori, ne mogu sa sigurnošću da kažem da je bilo šta suštinski bitno propušteno.
+\item Da li ima suštinskih grešaka i propusta?\\
+S obzirom da nisam stručna u oblastima o kojima ovaj rad govori, ne mogu sa sigurnošću da kažem da je bilo šta suštinski bitno propušteno.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada je odgovarajući.
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da, u kratkim crtama je opisano o čemu rad govori.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je srednje-težak za čitanje, potrebno je izdvojiti više vremena kao i dodatno istražiti neke pojmove, da bi se u potpunosti razumeo.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Za razumevanje ovog teksta je potrebno predznanje iz oblasti matematike i veštačke inteligencije.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+U radu je navedena odgovarajuća literatura.
+\item Da li su u radu reference korektno navedene?\\
+Reference su korektno navedene.
+\item Da li je struktura rada adekvatna?\\
+Struktura rada je adekvatna, pojmovi su obrađeni u dobrom redosledu, glave nas stepen po stepen uvode u glavnu tematiku rada.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Rad sadrži sve elemente (sadržaj, literaturu, uvod, sažetak, zaključak, slike, tabele, broj strana...) propisane uslovom seminarskog rada.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Sve od navedenog je adekvatno.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Malo sam upućena u navedenu oblast, pa samim tim nisam u poziciji da dajem konstruktivne ideje, niti neke značajne primedbe o ovom radu.
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Nakon uvodnih sekcija u kojima se upoznajemo sa osnovama mašinskog učenja i verifikacije softvera (dinamičke i statičke), vidimo primene mašinskog učenja (konkretno problema klasifikacije) u statičkoj verifikaciji softvera. Dati su primeri i rezultati rešavanja problema pronalaženja interpolanti koristeći 3 različite metode mašinskog učenja.
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+Nema značajnijih zamerki.
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+\begin{itemize}
+ \item Napravljen je propust prilikom imenovanja uvodne sekcije, korišćena je latinica umesto ćirilice.
+     \\\\
+    \odgovor{Исправљено.} 
+	\\
+ \item U poslednjoj rečenici sekcije 3 postoje 2 propusta:
+ 	\begin{enumerate}
+ 		\item Skraćenica SAT nije istaknuta, već je napisana malim slovima ćirilice, te je neupućen čitalac ne bi ni primetio ili razumeo kao takvu
+     \\\\
+    \odgovor{Исправљено.} 
+	\\
+ 		\item Greška pri kucanju, iskucano \say{s} umesto \say{š}
+     \\\\
+    \odgovor{Исправљено.} 
+	\\
+ 	\end{enumerate}
+ \item Poslednja rečenica na stranici 7 neispravna
+ %TODO ne znam sta je neispravno
+ \item U drugom pasusu sekcije 6.1 nepravilno napisana reč \say{konjukcija}
+    \\\\
+    \odgovor{Исправљено.} 
+	\\
+ \item Na dnu strane 10 pored reference na sliku 8 je korišćena latinica
+      \\\\
+    \odgovor{Исправљено.} 
+	\\
+\end{itemize}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+{Rad vrlo precizno odgovara na zadatu temu, uz dosta primera i rezultata praktičnih eksperimenata.}
+\item Da li je nešto važno propušteno?\\
+{Ne, rad daje korektan odgovor na zadatu temu, u granicama koje je dozvolio obim rada, uz veoma dobru literaturu za dalje istraživanje.}
+\item Da li ima suštinskih grešaka i propusta?\\
+{Nema većih grešaka, vrlo korektan rad. Svi nedostaci su sitni i tiču se tehničkih detalja.}
+\item Da li je naslov rada dobro izabran?\\
+{Iako je naslov zapravo i tema, verujem da je naslov dobro izabran, jer upravo to predstavlja suštinu rada.}
+\item Da li sažetak sadrži prave podatke o radu?\\
+{Sažetak se vrlo malo bavi sadržajem rada, već se posvećuje samoj temi. U ovom slučaju, kada je tema dosta zanimljiva i neobična, to može biti dobra reklama. Ipak, možda je ipak potrebno dodati malo više specifičnosti rada u sažetak.}
+\item Da li je rad lak-težak za čitanje?\\
+{Rad je dosta težak za čitanje. Stiče se utisak da se promenom stila pisanja to ne bi promenilo, zbog same složenosti teme, velikog broja stručnih izraza, naziva metoda, itd.}
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+{Iako je sve što je korišćeno u radu lepo argumentovano, objašnjeno i referisano odgovarajućom literaturom, od čitaoca se očekuje da dobro poznaje računarske nauke.}
+\item Da li je u radu navedena odgovarajuća literatura?\\
+{Literatura je odlično referisana, na pravim mestima i odlične sadržine. Mnogi pojmovi koji su uvedeni, a koji se ne tiču samog rada su ojačani referencama na literaturu koja ih detaljnije objašnjava.}
+\item Da li su u radu reference korektno navedene?\\
+{Uredne reference. Jedina zamerka što na kraju sekcije 4 nema reference na sekciju 6, koja se spominje direktno.}
+\item Da li je struktura rada adekvatna?\\
+{Vrlo uredna struktura rada. Nakon početnih sekcija koje čitaoca upoznaju sa podtemama prelazi se na glavnu temu koja objedinjuje prethodni sadržaj.}
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+{Rad je u potpunosti ispoštovao sve uslove seminarskog rada.}
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+{Slike i tabele potpuno funkcionalne. Jedina zamerka za slike 1, 7 i 9, jer smatram da bi (pošto su dosta jednostavne) mogle da se urede da budu na srpskom jeziku, u skladu sa ostatkom rada.}
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+U temu rada sam malo upućen. Teme navedene u početnim sekcijama rada sam izučavao (ili izučavam) na fakultetskim kursevima, a sve što se dalje navodi u radu, njihova kombinacija, je potpuna novost za mene.
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+
+\end{document}

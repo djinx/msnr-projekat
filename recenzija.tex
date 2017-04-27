@@ -62,12 +62,24 @@ Spomenuto je da softverske greške mogu imati značajne posledice pogotovo u nek
 \indent Preporuka: Navesti primer neke od tih ,,ozbiljnih posledica'' (npr. pad aviona, smrt pacijenta, ...) ili barem referisati na rad koji to tvrdi i tamo daje neki razlog zašto je to bitno. Ukoliko je primer izbačen ili nije stavljen zbog nedostatka prostora (zbog ograničenja strana) onda ovu primedbu možete ignorisati. \\
 \indent Pojašljenje: Ovo treba dodati u samom uvodu a ne u poglavlju 4. \\
 
+
+\odgovor{Убачено у уводном поглављу.}\\
+
+
 \textit{Poglavlje 4.2 (prvi pasus).} Piše: ,,O opštoj slici primene algoritama mašinskog učenja je bilo više reči u uvodnom delu ovog poglavlja.''. Uvodni deo je prvi pasus poglavlja 4 gde se ne govori o tome. U pitanju je poglavlje 4.1. \\
 \indent Preporuka: Referisati na ovo poglavlje, na primer dodati u zagradi (poglavlje 4.1) ili promeniti tekst u ,,...bilo više reči u poglavlju 4.1''. \\
+
+
+\odgovor{Преправљено у: "у претходном поглављу".}\\
+
 
 \textit{Poglavlje 4.2 (pasus ,,Metoda potpornih vektora'').} Piše: ,,Binarni klasifikator je hiperravan koja deli prostor na dva dela, tako da su u jednom delu prostora nađu sve istance koje pripadaju jednoj klasi, a u drugom delu će se naći one koje pripadaju drugoj klasi.''. \\
 \indent Primedba: Ne postoji garancija da takva hiperravan postoji, tj. da je moguće podeliti istance tako da se u dobijenim delovima nađu samo istance jedne klase. Ako se radi pod pretpostavkom da je moguće onda to treba navesti tj. da su podaci linearno razdvojivi (linearly separable) ili ako nije onda spomenuti da se vrši klasifikacija sa mekom marginom. \\
 \indent Komentar: Pretpostavljam da niste želeli da previše ulazite u detalje ali predlažem da se doda ovo pojašnjenje. \\
+
+
+\odgovor{Неки детаљи попут овог су изостављени зарад смањења обима рада. Са друге стране, ово тврђење није тачно. Наиме, ако се користи \textit{кернел трик} (eng. kernel trick) подаци се пресликавају у високодимензионални простор у коме могу бити линеарно сепарабилни. Тако на пример, са RBF кернелом (radial basis function kernel) постиже се бесконачна Вапник-Червоненкинсова димензионалност што овај модел чини јако прилагодљивим. Одавде следи да модел може лоше генерализовати, тј. преприлагодити се подацима и овде имамо тврду маргину. Ако се уведе проблем линеарне сепарабилности, онда треба причати и о кернел трику, показати како се изводи, зашто је бољи/лошији, дати слику. Већ је ударен горњи лимит броја страна, а при томе овај уводни део машинског учења није од толике важности.}\\
+
 
 \textit{Poglavlje 6.} Nema uvod. \\
 \indent Preporuka: Dodati uvod. \\
@@ -132,7 +144,7 @@ $A \equiv x_1 = 0 \land y_1 = 0 \land if\_then\_else(b,\ x = x_1 \land y = y_1,\
 	\\
 	\item \textit{Poglavlje 4.1 (treći pasus posle definicije).} U rečenici: ,,Primer regresije je predikcij\textbf{u}...'', postoji slovna greška (,,predikcij\textbf{U}'' u ,,predikcij\textbf{A}'' ili ,,predviđanje'').
     \\\\
-    \odgovor{Измењено у предикцију.} 
+    \odgovor{Измењено у предикција.} 
 	\\
 	\item \textit{Poglavlje 4.1 (četvrti pasus posle definicije).} U rečenici: ,,Izabra\textbf{li} model...'', postoji slovna greška (,,Izabra\textbf{LI}'' u ,,Izabra\textbf{N}'').
     \\\\
@@ -306,7 +318,11 @@ Rad govori o načinima verifikacije softvera, o osnovama mašinskog učenja i pr
 \section{Krupne primedbe i sugestije}
 Mnoštvo tehnika zaista pruža veliki broj informacija o temi koja se obrađuje, ali se postavlja pitanje \say {Koju tehniku zaista koristiti?} Kod većine tehnika fale okolnosti pod kojima se, konkretno ona, koristi i kada će dati najbolje rezultate (posledice toga bi bile i odnosi između tehnika).
 \section{Sitne primedbe}
-Stil pisanja je razumljiv i konkretizovan, među sitne primedbe spadaju samo neke od štamparskih grešaka (završetak rečenice zarezom, počinjanje pasusa navodnikom itd.)
+Stil pisanja je razumljiv i konkretizovan, među sitne primedbe spadaju samo neke od štamparskih grešaka (završetak rečenice zarezom, počinjanje pasusa navodnikom itd.)\\
+
+\odgovor{Било би корисно знати које су то штампарске грешке и која реченица се завршава запетом, јер у противном неће бити исправљене.}\\
+
+
 \section{Provera sadržajnosti i forme seminarskog rada}
 
 
@@ -456,6 +472,9 @@ Nema značajnijih zamerki.
 	\\
  	\end{enumerate}
  \item Poslednja rečenica na stranici 7 neispravna
+ \\\\
+    \odgovor{Рад је преправљан, тако да локација те реченице вероватно није иста па не знам о којој се реченици ради. Са друге стране шта је неисправно код ње?.} 
+	\\
  %TODO ne znam sta je neispravno
  \item U drugom pasusu sekcije 6.1 nepravilno napisana reč \say{konjukcija}
     \\\\

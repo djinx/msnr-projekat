@@ -1,7 +1,7 @@
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Nemanja Micovic <nmicovic@outlook.com> 
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-PROJECT = PrimenaMasinskogUcenjaUStatickojVerfikacijiSoftveraLazarRankovicNemanjaMicovicUrosStegic
+PROJECT = 06_PrimenaMasinskogUcenjaUStatickojVerifikacijiSoftveraMicovicRankovicStegic
 OUTPUT = $(PROJECT).pdf
 SRC = $(PROJECT).tex
 BIB = $(PROJECT).bib

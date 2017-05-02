@@ -78,7 +78,7 @@ Spomenuto je da softverske greške mogu imati značajne posledice pogotovo u nek
 \indent Komentar: Pretpostavljam da niste želeli da previše ulazite u detalje ali predlažem da se doda ovo pojašnjenje. \\
 
 
-\odgovor{Неки детаљи попут овог су изостављени зарад смањења обима рада. Са друге стране, ово тврђење није тачно. Наиме, ако се користи \textit{кернел трик} (eng. kernel trick) подаци се пресликавају у високодимензионални простор у коме могу бити линеарно сепарабилни. Тако на пример, са RBF кернелом (radial basis function kernel) постиже се бесконачна Вапник-Червоненкинсова димензионалност што овај модел чини јако прилагодљивим. Одавде следи да модел може лоше генерализовати, тј. преприлагодити се подацима и овде имамо тврду маргину. Ако се уведе проблем линеарне сепарабилности, онда треба причати и о кернел трику, показати како се изводи, зашто је бољи/лошији, дати слику. Већ је ударен горњи лимит броја страна, а при томе овај уводни део машинског учења није од толике важности.}\\
+\odgovor{Неки детаљи попут овог су изостављени зарад смањења обима рада. Са друге стране, ово тврђење није тачно. Наиме, ако се користи \textit{кернел трик} (eng. kernel trick) подаци се пресликавају у високодимензионални простор у коме могу бити линеарно сепарабилни. Тако на пример, са RBF кернелом (radial basis function kernel) постиже се бесконачна Вапник-Червоненкинсова димензионалност што овај модел чини јако прилагодљивим. Одавде следи да модел може лоше генерализовати, тј. преприлагодити се подацима и овде имамо тврду маргину. Ако се уведе проблем линеарне сепарабилности, онда треба причати и о кернел трику, показати како се изводи, зашто је бољи/лошији, дати слику. Већ је достигнут горњи лимит броја страна, а при томе овај уводни део машинског учења није од толике важности.}\\
 
 
 \textit{Poglavlje 6.} Nema uvod. \\
@@ -120,13 +120,13 @@ u
 \indent Komentar: U suštini taj prelaz između 5 i 6 bi mogao biti bolji. Ukoliko se razreši prethodna primedba onda možda ovo neće biti problem. \\
 
 \odgovor{Поглавља 5 и 6 су сада поглавље 5. Старо поглвље 5 се користи као увод, а старо поглавље 6 као главни део новог поглавља 5.
-    Ново поглавље 5 излаже у делу 5.1.1, 5.1.2 и 5.2 који  приступе из цитираних радова.}
+    Ново поглавље 5 излаже у делу 5.1.1, 5.1.2 и 5.2 и користи приступе из цитираних радова.}\\
 
 \textit{Poglavlje 6}. Data je formula: \\ 
 $A \equiv x_1 = 0 \land y_1 = 0 \land if\_then\_else(b,\ x = x_1 \land y = y_1,\ x = x_1 + 1 \land y = y_1 + 1)$ \\
 \indent Primedba: Ne bi bilo loše naglasiti šta je tačno $b$ tj. da se ono odnosi na uslov u \begin{verbatim} 3: while(*) \end{verbatim} koji je nepoznat ili netrivijalan i da nema nikakve veze sa $B$. \\
 
-\odgovor{Формула је преформулисан. Спорни део са звездицом је замењен логичким изразом $e$ чије је значење образложено у тексту.}
+\odgovor{Формула је преформулисана. Спорни део са звездицом је замењен логичким изразом $e$ чије је значење образложено у тексту.}\\
 
 \textit{Poglavlje 6 (Tabela 1).} U pasusu u kojem se referiše na tabelu 1 se kaže: ,,Interpolante koje su označene sa isto su interpolante koje su dobijene koristeći rešavač OpenSMT.'' \\
 \indent Primedba: Reč ,,isto'' uvodi zabunu. Nije jasno po kom poređenju je isto. \\
@@ -239,7 +239,7 @@ Sa većinom spomenutih pojmova i tehnika sam već upoznat. Zahvaljujući kursevi
 
 У реченици "У делу 6 детаљније је описан приступ коришћен у [13]."\ би било боље када би се мало више описало о чему се заправо ради уместо коришћења хиперлинкова, јер у случају да се рад не чита у електронској форми може бити јако непрактично тражити по раду допуне за ову реченицу. Ово се понавља и у реченици: "У делу 6 изложене су основе из [13]...".
 
-\odgovor{Ефекат хиперлинкова је донекле ублажен. Старо поглавље 5 и 6 су спојени у једно свеобухватно поглавље 5 које детаљније у пажљивији уводи у тематику.}
+\odgovor{Ефекат хиперлинкова је донекле ублажен. Старо поглавље 5 и 6 су спојени у једно свеобухватно поглавље 5 који детаљније и пажљивије уводи у тематику.}
 
 \section{Ситне примедбе}
 У уводу сам наишао на реч провераву, претпостављам да ту треба ићи реч проверу.
@@ -338,10 +338,10 @@ Sa većinom spomenutih pojmova i tehnika sam već upoznat. Zahvaljujući kursevi
 Rad govori o načinima verifikacije softvera, o osnovama mašinskog učenja i primenama mašinskog učenja u verifikaciji softvera, koje je donelo veliko poboljšanje u toj oblasti. Uz svaku od obrađenih tema, rad pruža niz detaljno objašnjenih tehnika koje se primenjuju za konkretnu temu.
 
 \section{Krupne primedbe i sugestije}
-Mnoštvo tehnika zaista pruža veliki broj informacija o temi koja se obrađuje, ali se postavlja pitanje \say {Koju tehniku zaista koristiti?} Kod većine tehnika fale okolnosti pod kojima se, konkretno ona, koristi i kada će dati najbolje rezultate (posledice toga bi bile i odnosi između tehnika).
+Mnoštvo tehnika zaista pruža veliki broj informacija o temi koja se obrađuje, ali se postavlja pitanje \say {Koju tehniku zaista koristiti?} Kod većine tehnika fale okolnosti pod kojima se, konkretno ona, koristi i kada će dati najbolje rezultate (posledice toga bi bile i odnosi između tehnika).\\
 
 \odgovor{Примена машинског учења у области статичке верификације софтвера је област у развоју и не постоји
-    једноставан одговор на такво питање, нити је прошло довољно времена како би се неки метод показао као најбољи за неки од проблема.
+    једноставан одговор на такво питање, нити је прошло довољно времена како би се неки од метода показао као најбољи за неки од проблема.
 }
 \\
 
@@ -403,11 +403,9 @@ Glavna tema ovog rada se odnosi na probleme statičke verifikacije softvera i pr
 \section{Krupne primedbe i sugestije}
 % Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
 Osoba koja nije upoznata sa oblastima koje obrađuje ova tema ne može da isprati u potpunosti ovaj tekst bez dodatne literature, pa bi trebalo posvetiti više pažnje objašnjavajući neke pojmove. Na primer u glavi 3 koja opisuje tehnike statičke verifikacije, nije najjasnije kakve su te tehnike.
+\\
 
-\odgovor{Услед ограничења страна рад је у великој мери био ограничен поводом детаљног објашњења тематике коју обрађује.
-    Наведено додатно компликује што рад комбинује две области, верификацију софтвера и машинско учење. Кроз рад је наведено
-    више релевантних књига и радова који су више него довољни да дају додатна теоријска објашњења. Упркос томе, објашњени су
-    основни теоријски концепти верификације софтвера као и метода машинског учења који су коришћени у радовима који се приказују.}
+\odgovor{Услед ограниченог броја страна, рад је ограничен и неопходним детаљним објашњењима тематике коју обрађује. Поред Наведених ограничења, додатна отежавајућа околност је то што рад комбинује две области: машинско учење и верификацију софтвера. Кроз рад је наведено више релевантних књига и радова који дају додатна теоријска објашњења. Упркос томе, објашњени су основни теоријски концепти верификације софтвера као и метода машинског учења који су коришћени у радовима који се приказују.}
 
 \section{Sitne primedbe}
 % Напишете своја запажања на тему штампарских-стилских-језичких грешки
@@ -507,7 +505,7 @@ Nema značajnijih zamerki.
  	\end{enumerate}
  \item Poslednja rečenica na stranici 7 neispravna
  \\\\
-    \odgovor{Рад је преправљан, тако да локација те реченице вероватно није иста па не знам о којој се реченици ради. Са друге стране шта је неисправно код ње?} 
+    \odgovor{Рад је преправљан, тако да локација те реченице вероватно није иста па не знам о којој се реченици ради. Са друге стране, шта је неисправно код ње?} 
 	\\
  %TODO ne znam sta je neispravno
  \item U drugom pasusu sekcije 6.1 nepravilno napisana reč \say{konjukcija}

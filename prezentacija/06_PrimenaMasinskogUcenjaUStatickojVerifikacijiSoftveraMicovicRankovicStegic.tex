@@ -34,7 +34,9 @@
 %\usetheme{Copenhagen}
 %\usetheme{Darmstadt}
 %\usetheme{Dresden}
+
 %\usetheme{Frankfurt}
+
 %\usetheme{Goettingen}
 %\usetheme{Hannover}
 %\usetheme{Ilmenau}
@@ -46,9 +48,11 @@
 %\usetheme{Montpellier}
 %\usetheme{PaloAlto}
 %\usetheme{Pittsburgh}
+
 %\usetheme{Rochester}
-%\usetheme{Singapore}
-\usetheme{Szeged}
+\usetheme{Singapore}
+
+%\usetheme{Szeged}
 %\usetheme{Warsaw}
 
 % As well as themes, the Beamer class has a number of color themes
@@ -82,14 +86,25 @@
 \usepackage{color}
 \usepackage{url}
 \usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc} 
+\usepackage[utf8]{inputenc}
 \usepackage[export]{adjustbox}
 \usepackage{amsmath}
 \usepackage{sidecap}
+\usepackage{listings}
 \usepackage{mathtools}
 \usepackage[normalem]{ulem}
 %\usepackage[english,serbian]{babel}
 \usepackage[english,serbianc]{babel} %ukljuciti babel sa ovim opcijama, umesto gornjim, ukoliko se koristi cirilica
+
+\lstset{breakatwhitespace,
+language=C++,
+columns=fullflexible,
+keepspaces,
+breaklines,
+tabsize=4,
+showstringspaces=false,
+basicstyle=\ttfamily,
+extendedchars=true}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -97,7 +112,7 @@
 
 \title[Семинарски МСНР]{Примена техника машинског учења у статичкој верификацији софтвера}
 \author{	Лазар Ранковић ????/2016 \\
-		Немања Мићовић ????/2016 \\
+		Немања Мићовић 1085/2016 \\
 		Урош Стегић 447/2016
 }
 \institute[МАТФ]{Математички факултет}
@@ -118,17 +133,15 @@
 %	PREZENTACIJA
 %----------------------------------------------------------------------------------------
 
-
-
 %-----------------------------------------------------------------
 \section{Статичка верификација}
 
 \begin{frame}
 \frametitle{Мотивација}
 \begin{itemize}
-	\item Нуклеарна експлозија
-	\item Трећи светски рат
-	\item Не производе се више јафолитанке
+    \item Важност процеса верификације софтвера
+    \item Широка примена метода машинског учења
+    %\item Не производе се више јафолитанке :()
 \end{itemize}
 \end{frame}
 %-----------------------------------------------------------------
@@ -205,16 +218,129 @@
 \end{frame}
 %-----------------------------------------------------------------
 
-
-
-%-----------------------------------------------------------------
 \section{Примене МУ у статичкој верификацији}
+\begin{frame}[fragile]
+\frametitle{Проналажење интерполанти - потпорни вектори}
 
-\begin{frame}
-\frametitle{Неки наслов}
 \begin{itemize}
-\item Неки метод 1
-\item Неки метод 2
+    \item Делимо скуп стања програма на скупове $A$ и  $B$
+    \item $A$ и $B$ се описују формулом логике првог реда
+    \item $A$ садржи вредности $x$ и  $y$ након линија 1, 2, 3
+    \item $B$ садржи вредности $x$ и $y$ након линија 4, 5, 6 и 7
+\end{itemize}
+\begin{columns}
+\begin{column}{0.3\textwidth}
+    \begin{center}
+        \includegraphics[scale=0.17]{./slike/interpolant_code2.png}
+    \end{center}
+\end{column}
+\begin{column}{0.7\textwidth}  %%<--- here
+	\begin{itemize}
+    \item Интерполанта је доказ да су скупови $A$ и  $B$ дисјунктни
+    \item Доказивач теорема рачуна вредности за променљиве $x$ и  $y$
+    \item Добија се скуп инстанци над којима се може тренирати модел машинског учења
+    \end{itemize}
+\end{column}
+\end{columns}
+
+\end{frame}
+%-----------------------------------------------------------------
+%\begin{frame}
+%\frametitle{Проналажење интерполанти - потпорни вектори}
+%\begin{itemize}
+    %\item Делимо скуп стања програма на скупове $A$ и  $B$
+    %\item $A$ и $B$ се описују формулом логике првог реда
+    %\item $A$ садржи вредности $x$ и  $y$ након линија 1, 2, 3
+    %\item $B$ садржи вредности $x$ и $y$ након линија 4, 5, 6 и 7
+    %\item Интерполанта је доказ да су скупови $A$ и  $B$ дисјунктни
+    %\item Доказивач теорема рачуна вредности за променљиве $x$ и  $y$
+    %\item Добија се скуп инстанци над којима се може тренирати модел машинског учења
+%\end{itemize}
+%\end{frame}
+%-----------------------------------------------------------------
+\begin{frame}
+\frametitle{Проналажење интерполанти - потпорни вектори}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+	\begin{itemize}
+		\item Модел добијен применом метода потпорних вектора
+		\item Приказане праве одговарају једначинама:
+		$ p1: 2y = 2x + 1 $
+		$ p2: 2y = 2x - 1 $
+		\item Можемо извести интерполанту $ 2y \leq 2x + 1 \land 2y \geq 2x - 1 $
+        \item Инваријанта $x=y$ се може добити транслирањем правих што ближе позитивним инстанцама
+	\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}  %%<--- here
+	\begin{center}
+		\includegraphics[scale=0.22]{./slike/interpolant.png}
+	\end{center}
+\end{column}
+\end{columns}
+\end{frame}
+%-----------------------------------------------------------------
+\begin{frame}
+\frametitle{Грађење класификатора нетачне инваријанте}
+\begin{itemize}
+    \item Рангирају се својста програма по вероватноћи за стварање грешке
+    \item Циљ је програмеру понудити листу својстава које потенцијално треба проверити
+        %\begin{center}
+        %\includegraphics[scale=0.19]{./slike/interpolant2.png}    
+    %\end{center}
+\end{itemize}
+
+\begin{columns}
+\begin{column}{0.55\textwidth}
+    \begin{center}
+		\includegraphics[scale=0.15]{./slike/latent_code2.png}
+    \end{center}
+\end{column}
+\begin{column}{0.45\textwidth}  %%<--- here
+	\begin{center}
+		\includegraphics[scale=0.13]{./slike/latent_examples.png}
+	\end{center}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+%-----------------------------------------------------------------
+\begin{frame}[fragile]
+\frametitle{Грађење класификатора нетачне инваријанте}
+\begin{itemize}
+\item Користи се \textsc{Daikon} динамички детектор инваријанти који може да проверава:
+    \begin{itemize}
+        \item уређење ($x \leq y$)
+        \item опсег ($a \leq x \leq b$)
+        \item линеарне везе ($z = ax + by + c$)
+        \item и друге
+    \end{itemize}
+\item Добијена својства се кодирају у векторе и примењује се метода машинског учења
+\end{itemize}
+
+%\begin{center}
+    %\includegraphics[scale=0.15]{./slike/latent_errors_table.png}
+%\end{center}
+
+\begin{columns}
+\begin{column}{0.35\textwidth}
+    \begin{center}
+        \includegraphics[scale=0.16]{./slike/latent_flow.png}
+    \end{center}
+\end{column}
+\begin{column}{0.65\textwidth}  %%<--- here
+    \begin{center}
+        \includegraphics[scale=0.14]{./slike/latent_errors_table.png}
+    \end{center}
+\end{column}
+\end{columns}
+\end{frame}
+%-----------------------------------------------------------------
+\begin{frame}
+\frametitle{Закључак}
+\begin{itemize}
+    \item Машинско учење итекако може имати примену у верификацији софтвера
+    \item Добијени резултати су упоредиви а негде и бољи од традиционалних метода
 \end{itemize}
 \end{frame}
 %-----------------------------------------------------------------
@@ -226,4 +352,4 @@
 
 
 %-----------------------------------------------------------------
-\end{document} 
+\end{document}

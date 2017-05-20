@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{booktabs,hhline}
 
 \usepackage{multirow}       % used for making multirow tables (Nemanja)
 
@@ -388,19 +389,42 @@ $A$ представља скуп достижних стања док $B$ пр�
 и дисјункције попут \textit{p.vrednost > c $\lor \ p.levo \in T$}.
 
 Добијена својства је потребно превести у векторе како би се омогућила примена алгоритама машинског учења.
-Један пример кодирања добијених својстава је приказан на слици \ref{fig:latent_coding}.
+Један пример кодирања добијених својстава је приказан на табели \ref{table:latent_coding}.
 У раду је кодирање изведено у векторе димензије 388 јер се показало да су коришћени алгоритми
 успевали да игноришу ирелевантне атрибуте те висока димензионалност није сметала.
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.18]{./slike/latent_errors_table.png}
-\end{center}
-    \caption{Пример кодирања програмских својстава у вектор. Број променљивих је означен са \#v}
-\label{fig:latent_coding}
-\end{figure}
 
-У даљем тексту је приказан програмски код који се користи за илустрацију у \cite{Brun04findinglatent}, а на слици \ref{fig:latent_example}
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\centering
+\caption{Пример кодирања програмских својстава у вектор. Број променљивих је означен са \#v}
+\label{table:latent_coding}
+\begin{tabular}{l|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{\multirow{2}{*}{Својства}} & \multicolumn{4}{c|}{Једначина} & \multicolumn{3}{c|}{Тип променљиве} & \multirow{2}{*}{\#v} & \multirow{2}{*}{Резултат} \\ \cline{2-8}
+\multicolumn{1}{|l|}{}                          & $\leq$  & $=$  & $\neq$ & $\subseteq$ & int       & double       & niz      &                      &                           \\ \hline
+\multicolumn{1}{|l|}{out[1] $\leq$ in[1]}                          & 1           & 0  & 0  & 0      & 0         & 1            & 0        & 2                    & 19                        \\ \hline
+\multicolumn{1}{|l|}{$\forall$\ i: in[i] $\leq$ 100}                          & 1           & 0  & 0  & 0      & 0         & 1            & 0        & 1                    & 16                        \\ \hline
+\multicolumn{1}{|l|}{in[0] $=$ out[0]}                          & 0           & 1  & 0  & 0      & 0         & 1            & 0        & 2                    & 15                        \\ \hline
+\multicolumn{1}{|l|}{out.dužina $=$ in.dužina}                          & 0           & 1  & 0  & 0      & 1         & 0            & 0        & 2                    & 13                        \\ \hline
+\multicolumn{1}{|l|}{in $\subseteq$ out}                          & 0           & 0  & 0  & 1      & 0         & 0            & 1        & 2                    & 12                        \\ \hline
+\multicolumn{1}{|l|}{out $\subseteq$ in}                          & 0           & 0  & 0  & 1      & 0         & 0            & 1        & 2                    & 12                        \\ \hline
+\multicolumn{1}{|l|}{in $\neq$ null}                          & 0           & 0  & 1  & 0      & 0         & 0            & 1        & 1                    & 10                        \\ \hline
+\multicolumn{1}{|l|}{out $\neq$ null}                          & 0           & 0  & 1  & 0      & 0         & 0            & 1        & 1                    & 10                        \\ \hhline{|=|=|=|=|=|=|=|=|=|=|}
+\multicolumn{1}{|l|}{Тежине модела}             & 7           & 3  & 2  & 1      & 4         & 6            & 5        & 3                    & \multicolumn{1}{l|}{}     \\ \cline{1-10} 
+\end{tabular}
+\end{table}
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[scale=0.18]{./slike/latent_errors_table.png}
+%\end{center}
+    %\caption{Пример кодирања програмских својстава у вектор. Број променљивих је означен са \#v}
+%\label{fig:latent_coding}
+%\end{figure}
+
+У даљем тексту је приказан програмски код који се користи за илустрацију у \cite{Brun04findinglatent}, а у табели \ref{table:latent_example}
 листа програмских својстава који могу бити потенцијални проблеми. Добијена листа програмских својстава
 представља класификоване инстанце које потенцијално откривају грешку.
 
@@ -426,13 +450,31 @@ double[] bubble_sort(double[] in) {
 %\label{fig:latent_code}
 %\end{figure}
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[scale=0.16]{./slike/latent_examples.png}
-\end{center}
-    \caption{Листа понуђених програмских својстава}
-\label{fig:latent_example}
-\end{figure}
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[scale=0.16]{./slike/latent_examples.png}
+%\end{center}
+	%\caption{Листа понуђених програмских својстава}
+%\label{fig:latent_example}
+%\end{figure}
+
+\begin{table}[]
+\centering
+\caption{Листа понуђених програмских својстава}
+\label{table:latent_example}
+\begin{tabular}{|l|c|}
+\hline
+\multicolumn{1}{|c|}{Својства} & Открива грешку? \\ \hline
+out[1] $\leq$ in[1]                           & Да              \\ \hline
+$\forall i:$ in[i] $\leq$ 100                           & Не              \\ \hline
+in[0] = out[0]        & Да              \\ \hline
+out.duzina = in.duzina         & Не              \\ \hline
+in $\subseteq$ out                  & Не              \\ \hline
+out $\subseteq$ in                  & Не              \\ \hline
+in $\neq$ null                     & Не              \\ \hline
+out $\neq$ null                    & Не              \\ \hline
+\end{tabular}
+\end{table}
 
 % ---------------------------------------------------------------------------------------------------------------------
 \section{Закључак}
